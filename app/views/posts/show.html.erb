@@ -1,0 +1,14 @@
+<h1>This is the Post Show Page </h1> <hr/>
+
+<h2>Title of Post: <br><%=@post.title%> <br>
+<h2>Blogger: <%=link_to @post.blogger.name, blogger_path(@post.blogger)%></h2>
+<h2>Destination: <%=link_to @post.destination.name, destination_path(@post.destination)%></h2><br>
+
+
+<h3><%=@post.content.tr("[]","")%></h2> <br></h3>
+
+<h3>likes: <%= @post.likes%></h3>
+<%= button_to "like this post", like_path%>
+
+
+<h3><%= link_to "See All Posts", posts_path%></h3>

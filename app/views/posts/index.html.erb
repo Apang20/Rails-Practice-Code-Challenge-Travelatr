@@ -1,0 +1,6 @@
+<h1> Post Index Page </h1><hr/>
+<ul>
+<% @posts.each do |p| %>
+   <li><%=link_to p.title%></li>
+    <%end%>
+    </ul>
